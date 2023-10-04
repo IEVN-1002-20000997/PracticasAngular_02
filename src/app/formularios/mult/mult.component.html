@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="left-content">
+        <div class="input-container">
+            <mat-form-field>
+                <input matInput [(ngModel)]="num1" type="number" placeholder="Numero1">
+            </mat-form-field>
+        </div>
+        
+        <div class="input-container">
+            <mat-form-field>
+                <input matInput [(ngModel)]="num2" type="number" placeholder="Numero2">
+            </mat-form-field>
+        </div>
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" (click)="multiplicar()">Multiplicar</button>
+        </div>
+    </div>
+
+    <div class="right-content">
+        <div class="result-container">
+            <p>Numero 1: {{ num1 }}</p>
+            <p>Numero 2: {{ num2 }}</p>
+            <p>Resultado: {{ resultado }}</p>
+            <p>Desgloce: {{ procesoMultiplicacion }} = {{ resultado }}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-content,
+.right-content {
+    flex: 1;
+    padding: 20px; 
+    border: 2px solid black; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+.left-content {
+    margin-right: 20px; 
+}
+
+.result-container {
+    text-align: left;
+}
+
+
+  
+  
+
+
+  
+  
+  
