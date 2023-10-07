@@ -1,0 +1,76 @@
+<div class="container">
+    <br>
+    <div class="content-container">
+        <div class="left-content">
+            <h1>Entradas</h1>
+            <div class="input-container">
+                <mat-form-field class="custom-input-field">
+                    <input matInput [(ngModel)]="nombre" type="text" placeholder="Nombre">
+                </mat-form-field>
+            </div>
+            <div class="input-container">
+                <h2>Numero de compradores</h2>
+                <mat-form-field class="custom-input-field">
+                    <input matInput [(ngModel)]="compradores" type="number" placeholder="Número de Compradores" min="0">
+                </mat-form-field>
+            </div>
+            
+            <div class="input-container">
+                <h2>Cantidad de boletos por comprador</h2>
+                <mat-form-field class="custom-input-field" matTooltip="El boleto cuesta $12. Máximo 7 boletos por comprador">
+                    <input matInput [(ngModel)]="boletosPorComprador" type="number" placeholder="Número de Boletos por Comprador" min="0">
+                </mat-form-field>
+            </div>
+            <div class="input-container">
+                <h2>Tarjeta CINECO</h2>
+                <mat-radio-group [(ngModel)]="opcionSeleccionada" color="warn">
+                    <mat-radio-button value="si">Si</mat-radio-button>
+                    <mat-radio-button value="no">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="notas">
+                <p>Si compra más de 5 boletos obtiene 15% de descuento</p>
+                <p>Si compra de 3 a 5 obtiene 10% de descuento</p>
+                <p>Si compra de 2 a 1 no obtiene descuento</p>
+                <p>Si utiliza tarjeta CINECO obtienes 10% de descuento adicional sobre los descuentos ya obtenidos</p>
+            </div>
+            <br>
+        </div>
+
+        <div class="right-content">
+            <h1>Salidas</h1>
+            <div class="total-box uni" *ngIf="mostrarTotal">
+                <p *ngIf="!excedeLimite">Nombre: {{ nombre }}</p>
+                <p *ngIf="!excedeLimite">Número de Compradores: {{ compradores }}</p>
+                <p *ngIf="!excedeLimite">Boletos: {{ boletosPorComprador }}</p>
+                <p *ngIf="!excedeLimite">Total: ${{ resultado | number:'1.2-2' }}</p>
+                <p *ngIf="excedeLimite">No puedes comprar más boletos de los permitidos.</p>
+                <br>
+            </div>
+            <div>
+                
+            </div>
+            <br>
+            <div class="notas">
+                <h1 class="acc">Acciones</h1>
+                <div class="button-container">
+                    <button mat-raised-button color="primary" (click)="procesar()">Procesar</button>
+                    <button mat-raised-button color="primary" (click)="salir()">Salir</button>
+                </div>
+            </div>
+        </div>
+        <!--<div class="p">
+            <h1 class="acc">Acciones</h1>
+            <div class="button-container">
+                <button mat-raised-button color="primary" (click)="procesar()">Procesar</button>
+                <button mat-raised-button color="primary" (click)="salir()">Salir</button>
+            </div>
+        </div>-->
+    </div>
+</div>
+
+
+
+  
+
+
