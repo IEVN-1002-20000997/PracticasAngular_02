@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+
+    <span>
+        <a mat-button routerLink=""><mat-icon>fact_check
+        </mat-icon> PWA-1002
+        </a>
+    </span>
+    <div>
+        <a routerLinkActive="active" routerLink="Cinepolis" mat-button>Cinepolis</a>
+    </div>
+    <div>
+        <a routerLinkActive="active" routerLink="Mult" mat-button>Multiplicaciones</a>
+    </div>
+    <div>
+        <a routerLinkActive="active" routerLink="Temperatura" mat-button>Temperatura</a>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</mat-toolbar>
+<div>
+    <router-outlet></router-outlet>
+</div>

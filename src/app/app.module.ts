@@ -10,13 +10,16 @@ import { TemperaturaComponent } from './formularios/temperatura/temperatura.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MultComponent } from './formularios/mult/mult.component';
 import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component';
+import { MenuComponent } from './menu/menu/menu.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemperaturaComponent,
     MultComponent,
-    CinepolisComponent
+    CinepolisComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component'
     BrowserModule, 
     MultModule,
     BrowserAnimationsModule,
-    CineModule
+    CineModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
