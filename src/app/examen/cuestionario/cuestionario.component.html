@@ -1,0 +1,49 @@
+<div class="input-container">
+    <h2>¿Cuál es la suma de 2 + 2?</h2>
+    <mat-radio-group [(ngModel)]="opcionSeleccionadaP1" color="warn">
+        <mat-radio-button (change)="actualizarRespuestaCorrecta($event,'p1t')" value="t">4</mat-radio-button>
+        <mat-radio-button value="p1f1">3</mat-radio-button>
+        <mat-radio-button value="p1f2">5</mat-radio-button>
+        <mat-radio-button value="p1f3">2</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div class="input-container">
+    <h2>¿Cuál es la resta de 10 - 5?</h2>
+    <mat-radio-group [(ngModel)]="opcionSeleccionadaP2" color="warn">
+        <mat-radio-button value="p2f1">4</mat-radio-button>
+        <mat-radio-button value="p2f2">6</mat-radio-button>
+        <mat-radio-button (change)="actualizarRespuestaCorrecta($event,'p2t')" value="t">5</mat-radio-button>
+        <mat-radio-button value="p2f3">3</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div class="input-container">
+    <h2>¿Cuál es la multiplicación de 3 x 3?</h2>
+    <mat-radio-group [(ngModel)]="opcionSeleccionadaP3" color="warn">
+        <mat-radio-button value="p3f1">10</mat-radio-button>
+        <mat-radio-button (change)="actualizarRespuestaCorrecta($event,'p3t')" value="t">9</mat-radio-button>
+        <mat-radio-button value="p3f2">12</mat-radio-button>
+        <mat-radio-button value="p3f3">11</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div class="input-container">
+    <h2>¿Cuál es la división de 18 / 3?</h2>
+    <mat-radio-group [(ngModel)]="opcionSeleccionadaP4" color="warn">
+        <mat-radio-button value="p4f1">5</mat-radio-button>
+        <mat-radio-button value="p4f2">7</mat-radio-button>
+        <mat-radio-button value="p4f3">9</mat-radio-button>
+        <mat-radio-button (change)="actualizarRespuestaCorrecta($event,'p4t')" value="t">6</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div class="input-container">
+    <h2>¿Cuál es el valor de PI?</h2>
+    <mat-radio-group [(ngModel)]="opcionSeleccionadaP5" color="warn">
+        <mat-radio-button (change)="actualizarRespuestaCorrecta($event,'p5t')" value="t">3.1416</mat-radio-button>
+        <mat-radio-button value="p5f1">2.5</mat-radio-button>
+        <mat-radio-button value="p5f2">4</mat-radio-button>
+        <mat-radio-button value="p5f3">3.5</mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="mb-3">
+    <button class="btn btn-primary" type="button" (click)="onTerminar()">Terminar</button>
+</div>

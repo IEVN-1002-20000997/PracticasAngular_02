@@ -12,6 +12,10 @@ import { MultComponent } from './formularios/mult/mult.component';
 import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegistroComponent } from './examen/registro/registro.component';
+import { MaterialModule } from './material/material/material.module';
+import { CuestionarioComponent } from './examen/cuestionario/cuestionario.component';
+import { ResultadosComponent } from './examen/resultados/resultados.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,10 @@ import { AppRoutingModule } from './app-routing.module';
     TemperaturaComponent,
     MultComponent,
     CinepolisComponent,
-    MenuComponent
+    MenuComponent,
+    RegistroComponent,
+    CuestionarioComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,8 @@ import { AppRoutingModule } from './app-routing.module';
     MultModule,
     BrowserAnimationsModule,
     CineModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

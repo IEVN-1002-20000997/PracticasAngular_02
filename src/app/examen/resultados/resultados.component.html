@@ -1,0 +1,11 @@
+<div>
+    <h1>Resultados</h1>
+    <h3>{{ mensaje }}</h3>
+    <h3 *ngIf="edad !== undefined">Tienes {{ edad }} años</h3>
+    <h3 *ngIf="signoZodiacal !== undefined">
+        Tu signo zodiacal es {{ signoZodiacal }}
+        <img *ngIf="signoZodiacal !== undefined" [src]="obtenerUrlImagen(signoZodiacal)" alt="Imagen del signo zodiacal">
+    </h3>
+    <h3 *ngIf="calificacion !== undefined && calificacion !== null">Tu calificación es: {{ calificacion }} de 5</h3>
+</div>
+  
